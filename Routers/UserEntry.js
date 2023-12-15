@@ -1,9 +1,7 @@
-const express = require("express");
+const router = require("express").Router();
 const { User, generateToken } = require("../Model/User");
 const { jwt } = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
-
-const router = express.Router();
 
 // Signup router
 router.post("/signup", async (req, res) => {
