@@ -3,7 +3,7 @@ const dotenv = require("dotenv");
 const dbConnection = require("./DB");
 const userEntryRouter = require("./Routers/UserEntry.js");
 const userAuth = require("./Controller/User_Authentication");
-
+const cors = require("cors")
 const app = express();
 
 // dot env configuration
@@ -12,6 +12,7 @@ const PORT = process.env.PORT;
 
 // Middlewares
 app.use(express.json());
+app.use(cors())
 
 // DB Connection
 dbConnection();
